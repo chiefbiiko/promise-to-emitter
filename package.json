@@ -1,0 +1,29 @@
+{
+  "name": "promise-to-emitter",
+  "version": "0.0.1",
+  "description": "transform a promise to an event emitter",
+  "main": "index.js",
+  "unpkg": "bundle.js",
+  "scripts": {
+    "bundle": "browserify index.js -s promiseToEmitter -o bundle.js",
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiefbiiko/promise-to-emitter.git"
+  },
+  "keywords": [
+    "promise",
+    "event",
+    "emitter"
+  ],
+  "author": "Noah Anabiik Schwarz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiefbiiko/promise-to-emitter/issues"
+  },
+  "homepage": "https://github.com/chiefbiiko/promise-to-emitter#readme",
+  "devDependencies": {
+    "tape": "^4.9.0"
+  }
+}
