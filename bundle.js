@@ -520,15 +520,17 @@ function functionBindPolyfill(context) {
 }
 
 },{}],2:[function(require,module,exports){
-var { EventEmitter } = require('events')
+var EventEmitter = require('events').EventEmitter
 
-function toEventEmitter (p) {
-  var ee = new EventEmitter()
-  p.then(ee.emit.bind(ee, 'resolved')).catch(ee.emit.bind(ee, 'rejected'))
-  return ee
+function promiseToEmitter (promise) {
+  var emitter = new EventEmitter()
+  promise
+    .then(emitter.emit.bind(emitter, 'resolved'))
+    .catch(emitter.emit.bind(emitter, 'rejected'))
+  return emitter
 }
 
-module.exports = toEventEmitter
+module.exports = promiseToEmitter
 
 },{"events":1}]},{},[2])(2)
 });

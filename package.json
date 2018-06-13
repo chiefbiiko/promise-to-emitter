@@ -1,7 +1,7 @@
 {
   "name": "promise-to-emitter",
-  "version": "0.0.1",
-  "description": "transform a promise to an event emitter",
+  "version": "0.1.0",
+  "description": "turn a promise to an event emitter",
   "main": "index.js",
   "unpkg": "bundle.js",
   "scripts": {
